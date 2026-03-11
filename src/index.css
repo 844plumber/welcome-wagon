@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,35 +6,35 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 30% 10%;
+    --background: 210 30% 96%;
+    --foreground: 215 35% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 10%;
+    --card-foreground: 215 35% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 10%;
+    --popover-foreground: 215 35% 12%;
 
-    --primary: 24 95% 53%;
+    --primary: 15 90% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 25% 14%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 215 40% 12%;
+    --secondary-foreground: 210 20% 95%;
 
-    --muted: 220 15% 92%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 210 20% 90%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 200 80% 50%;
+    --accent: 170 75% 42%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 24 95% 53%;
+    --border: 210 18% 85%;
+    --input: 210 18% 85%;
+    --ring: 15 90% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -46,34 +46,34 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Custom tokens */
-    --hero-overlay: 220 30% 8%;
-    --section-dark: 220 25% 10%;
-    --section-dark-foreground: 220 15% 92%;
-    --badge-bg: 24 95% 53% / 0.15;
-    --badge-text: 24 80% 45%;
-    --glow-primary: 0 0 40px hsl(24 95% 53% / 0.3);
+    --hero-overlay: 215 40% 8%;
+    --section-dark: 215 40% 10%;
+    --section-dark-foreground: 210 20% 92%;
+    --badge-bg: 15 90% 55% / 0.15;
+    --badge-text: 15 75% 45%;
+    --glow-primary: 0 0 40px hsl(15 90% 55% / 0.35);
   }
 
   .dark {
-    --background: 220 25% 6%;
-    --foreground: 210 40% 98%;
-    --card: 220 25% 10%;
-    --card-foreground: 210 40% 98%;
-    --popover: 220 25% 10%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 24 95% 53%;
+    --background: 215 40% 6%;
+    --foreground: 210 30% 96%;
+    --card: 215 40% 10%;
+    --card-foreground: 210 30% 96%;
+    --popover: 215 40% 10%;
+    --popover-foreground: 210 30% 96%;
+    --primary: 15 90% 55%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 220 20% 15%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 200 80% 50%;
-    --accent-foreground: 210 40% 98%;
+    --secondary: 215 35% 16%;
+    --secondary-foreground: 210 30% 96%;
+    --muted: 215 30% 15%;
+    --muted-foreground: 210 20% 65%;
+    --accent: 170 75% 42%;
+    --accent-foreground: 210 30% 96%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
-    --ring: 24 95% 53%;
+    --border: 215 30% 18%;
+    --input: 215 30% 18%;
+    --ring: 15 90% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

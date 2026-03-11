@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Montserrat', 'system-ui', 'sans-serif'],
+        body: ['Montserrat', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -83,8 +83,8 @@ export default {
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(24 95% 53% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(24 95% 53% / 0.5)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(15 90% 55% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(15 90% 55% / 0.5)" },
         },
       },
       animation: {
