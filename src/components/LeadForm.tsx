@@ -24,11 +24,11 @@ const LeadForm = () => {
   };
 
   return (
-    <section id="lead-form" className="py-24 bg-background">
+    <section id="lead-form" className="py-28 bg-background relative">
       <div className="container mx-auto px-6 max-w-xl">
         <div className="text-center mb-12">
-          <span className="text-primary font-medium text-sm uppercase tracking-widest">Get Started</span>
-          <h2 className="text-3xl sm:text-4xl font-bold mt-3 text-foreground">
+          <span className="text-primary font-semibold text-sm uppercase tracking-[0.2em]">Get Started</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold mt-4 text-foreground tracking-tight">
             Check Availability
           </h2>
           <p className="text-muted-foreground mt-3">
@@ -38,32 +38,32 @@ const LeadForm = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-card border border-border rounded-2xl p-8 shadow-lg space-y-5"
+          className="premium-card p-10 space-y-6"
         >
           <div className="space-y-2">
-            <Label htmlFor="fullName">Full Name</Label>
-            <Input id="fullName" placeholder="John Smith" value={formData.fullName} onChange={handleChange("fullName")} required />
+            <Label htmlFor="fullName" className="font-semibold">Full Name</Label>
+            <Input id="fullName" placeholder="John Smith" value={formData.fullName} onChange={handleChange("fullName")} required className="h-12 rounded-xl bg-background" />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="companyName">Company Name</Label>
-            <Input id="companyName" placeholder="Smith's Plumbing" value={formData.companyName} onChange={handleChange("companyName")} required />
+            <Label htmlFor="companyName" className="font-semibold">Company Name</Label>
+            <Input id="companyName" placeholder="Smith's Plumbing" value={formData.companyName} onChange={handleChange("companyName")} required className="h-12 rounded-xl bg-background" />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="city">City</Label>
-            <Input id="city" placeholder="Austin, TX" value={formData.city} onChange={handleChange("city")} required />
+            <Label htmlFor="city" className="font-semibold">City</Label>
+            <Input id="city" placeholder="Austin, TX" value={formData.city} onChange={handleChange("city")} required className="h-12 rounded-xl bg-background" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="space-y-2">
-              <Label htmlFor="phone">Phone</Label>
-              <Input id="phone" type="tel" placeholder="(555) 123-4567" value={formData.phone} onChange={handleChange("phone")} required />
+              <Label htmlFor="phone" className="font-semibold">Phone</Label>
+              <Input id="phone" type="tel" placeholder="(555) 123-4567" value={formData.phone} onChange={handleChange("phone")} required className="h-12 rounded-xl bg-background" />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" placeholder="john@smithplumbing.com" value={formData.email} onChange={handleChange("email")} required />
+              <Label htmlFor="email" className="font-semibold">Email</Label>
+              <Input id="email" type="email" placeholder="john@smithplumbing.com" value={formData.email} onChange={handleChange("email")} required className="h-12 rounded-xl bg-background" />
             </div>
           </div>
 
-          <Button type="submit" variant="hero" size="lg" className="w-full text-base py-6">
+          <Button type="submit" variant="hero" size="lg" className="w-full text-base py-7 rounded-xl">
             Check Availability
           </Button>
         </form>
