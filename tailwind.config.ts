@@ -63,6 +63,10 @@ export default {
         },
         "section-dark": "hsl(var(--section-dark))",
         "section-dark-foreground": "hsl(var(--section-dark-foreground))",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -83,15 +87,15 @@ export default {
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(15 90% 55% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(15 90% 55% / 0.5)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(16 85% 52% / 0.3)" },
+          "50%": { boxShadow: "0 0 50px hsl(16 85% 52% / 0.5)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.6s ease-out forwards",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 2.5s ease-in-out infinite",
       },
     },
   },
