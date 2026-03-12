@@ -12,7 +12,7 @@ const Hero = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="w-full h-full object-cover scale-105" />
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/98 via-secondary/90 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/[0.97] via-secondary/95 to-background" />
       </div>
 
       {/* Ambient glow */}
