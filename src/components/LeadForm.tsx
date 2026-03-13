@@ -24,11 +24,11 @@ const LeadForm = () => {
   };
 
   return (
-    <section id="lead-form" className="py-28 bg-background relative">
+    <section id="lead-form" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-6 max-w-xl">
-        <div className="text-center mb-12">
-          <span className="text-primary font-semibold text-sm uppercase tracking-[0.2em]">Get Started</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold mt-4 text-foreground tracking-tight">
+        <div className="text-center mb-10">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Get Started</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
             Check Availability
           </h2>
           <p className="text-muted-foreground mt-3">
@@ -38,32 +38,32 @@ const LeadForm = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="premium-card p-10 space-y-6"
+          className="bg-background border border-border rounded-xl p-8 shadow-sm space-y-5"
         >
-          <div className="space-y-2">
-            <Label htmlFor="fullName" className="font-semibold">Full Name</Label>
-            <Input id="fullName" placeholder="John Smith" value={formData.fullName} onChange={handleChange("fullName")} required className="h-12 rounded-xl bg-background" />
+          <div className="space-y-1.5">
+            <Label htmlFor="fullName" className="font-medium text-foreground">Full Name</Label>
+            <Input id="fullName" placeholder="John Smith" value={formData.fullName} onChange={handleChange("fullName")} required className="h-11 rounded-md" />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="companyName" className="font-semibold">Company Name</Label>
-            <Input id="companyName" placeholder="Smith's Plumbing" value={formData.companyName} onChange={handleChange("companyName")} required className="h-12 rounded-xl bg-background" />
+          <div className="space-y-1.5">
+            <Label htmlFor="companyName" className="font-medium text-foreground">Company Name</Label>
+            <Input id="companyName" placeholder="Smith's Plumbing" value={formData.companyName} onChange={handleChange("companyName")} required className="h-11 rounded-md" />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="city" className="font-semibold">City</Label>
-            <Input id="city" placeholder="Austin, TX" value={formData.city} onChange={handleChange("city")} required className="h-12 rounded-xl bg-background" />
+          <div className="space-y-1.5">
+            <Label htmlFor="city" className="font-medium text-foreground">City</Label>
+            <Input id="city" placeholder="Austin, TX" value={formData.city} onChange={handleChange("city")} required className="h-11 rounded-md" />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div className="space-y-2">
-              <Label htmlFor="phone" className="font-semibold">Phone</Label>
-              <Input id="phone" type="tel" placeholder="(555) 123-4567" value={formData.phone} onChange={handleChange("phone")} required className="h-12 rounded-xl bg-background" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="space-y-1.5">
+              <Label htmlFor="phone" className="font-medium text-foreground">Phone</Label>
+              <Input id="phone" type="tel" placeholder="(555) 123-4567" value={formData.phone} onChange={handleChange("phone")} required className="h-11 rounded-md" />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="email" className="font-semibold">Email</Label>
-              <Input id="email" type="email" placeholder="john@smithplumbing.com" value={formData.email} onChange={handleChange("email")} required className="h-12 rounded-xl bg-background" />
+            <div className="space-y-1.5">
+              <Label htmlFor="email" className="font-medium text-foreground">Email</Label>
+              <Input id="email" type="email" placeholder="john@smithplumbing.com" value={formData.email} onChange={handleChange("email")} required className="h-11 rounded-md" />
             </div>
           </div>
 
-          <Button type="submit" variant="hero" size="lg" className="w-full text-base py-7 rounded-xl">
+          <Button type="submit" variant="hero" size="lg" className="w-full py-6 text-base">
             Check Availability
           </Button>
         </form>
