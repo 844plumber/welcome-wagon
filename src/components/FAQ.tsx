@@ -17,11 +17,11 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="py-28 section-dark relative overflow-hidden">
-      <div className="container mx-auto px-6 max-w-3xl relative z-10">
-        <div className="text-center mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-[0.2em]">FAQ</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold mt-4 text-section-dark-foreground tracking-tight">
+    <section className="py-20 md:py-28 bg-secondary">
+      <div className="container mx-auto px-6 max-w-3xl">
+        <div className="text-center mb-14">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
             Frequently Asked Questions
           </h2>
         </div>
@@ -31,12 +31,12 @@ const FAQ = () => {
             <AccordionItem
               key={i}
               value={`faq-${i}`}
-              className="bg-secondary/30 border border-border/8 rounded-2xl px-7 data-[state=open]:border-primary/25 data-[state=open]:bg-secondary/50 transition-all duration-300"
+              className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-sm transition-shadow duration-200"
             >
-              <AccordionTrigger className="text-section-dark-foreground text-left font-semibold text-lg hover:no-underline py-6">
+              <AccordionTrigger className="text-foreground text-left font-semibold text-base hover:no-underline py-5">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-section-dark-foreground/65 text-base pb-6 leading-relaxed">
+              <AccordionContent className="text-muted-foreground text-base pb-5 leading-relaxed">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>

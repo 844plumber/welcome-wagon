@@ -1,6 +1,5 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -8,45 +7,42 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover scale-105" />
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/[0.97] via-secondary/95 to-background" />
-      </div>
+    <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+          {/* Left column */}
+          <div>
+            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              Only one plumbing company per territory
+            </div>
 
-      {/* Ambient glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full opacity-20 blur-[120px]" style={{ background: 'hsl(var(--primary))' }} />
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-foreground leading-[1.1] mb-6 tracking-tight">
+              Stop Losing Plumbing Jobs to Missed Calls.
+            </h1>
 
-      <div className="relative z-10 container mx-auto px-6 py-32 text-center max-w-4xl">
-        <div className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full border border-primary/25 bg-primary/10 backdrop-blur-sm">
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-primary text-sm font-semibold tracking-wide">Only one plumbing company per territory</span>
-        </div>
+            <p className="text-lg text-muted-foreground max-w-lg mb-8 leading-relaxed">
+              Own <strong className="text-foreground font-semibold">844-PLUMBER</strong> in your city — powered by a 24/7 AI Receptionist that books jobs automatically.
+            </p>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-secondary-foreground leading-[1.1] mb-8 tracking-tight">
-          Stop Losing Plumbing Jobs to{" "}
-          <span className="text-gradient">Missed Calls.</span>
-        </h1>
+            <Button variant="hero" size="lg" className="px-8 py-6 text-base" onClick={scrollToForm}>
+              <Phone className="w-5 h-5" />
+              Check Availability in My City
+            </Button>
 
-        <p className="text-lg sm:text-xl text-secondary-foreground/65 max-w-2xl mx-auto mb-12 font-body leading-relaxed">
-          Own <strong className="text-primary font-bold">844-PLUMBER</strong> in your city — powered by a 24/7 AI Receptionist that books jobs automatically.
-        </p>
+            <div className="mt-8 flex flex-wrap items-center gap-6 text-muted-foreground text-sm">
+              <span>✓ No Setup Fees</span>
+              <span>✓ 24/7 AI Coverage</span>
+              <span>✓ Exclusive Territory</span>
+            </div>
+          </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button variant="hero" size="lg" className="text-base px-10 py-7 rounded-xl text-[15px]" onClick={scrollToForm}>
-            <Phone className="w-5 h-5" />
-            Check Availability in My City
-          </Button>
-        </div>
-
-        {/* Trust indicators */}
-        <div className="mt-16 flex items-center justify-center gap-8 text-secondary-foreground/30 text-sm font-medium">
-          <span>✓ No Setup Fees</span>
-          <span className="w-1 h-1 rounded-full bg-secondary-foreground/20" />
-          <span>✓ 24/7 AI Coverage</span>
-          <span className="w-1 h-1 rounded-full bg-secondary-foreground/20" />
-          <span>✓ Exclusive Territory</span>
+          {/* Right column — visual */}
+          <div className="hidden md:flex items-center justify-center">
+            <div className="w-full max-w-sm aspect-square rounded-2xl bg-secondary border border-border flex items-center justify-center">
+              <Phone className="w-20 h-20 text-accent" strokeWidth={1.5} />
+            </div>
+          </div>
         </div>
       </div>
     </section>
