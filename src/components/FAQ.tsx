@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const faqs = [
   { q: "Is this a shared number?", a: "No. Only one plumbing company per territory. You own 844-PLUMBER exclusively in your city." },
@@ -17,31 +18,35 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="py-20 md:py-28 bg-secondary">
+    <section className="py-24 md:py-36 gradient-section-alt noise-bg">
       <div className="container mx-auto px-6 max-w-3xl">
-        <div className="text-center mb-14">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">FAQ</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
-            Frequently Asked Questions
-          </h2>
-        </div>
+        <AnimatedSection>
+          <div className="text-center mb-16">
+            <p className="text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4">FAQ</p>
+            <h2 className="text-4xl sm:text-[44px] font-extrabold text-foreground tracking-[-0.02em]">
+              Frequently Asked Questions
+            </h2>
+          </div>
+        </AnimatedSection>
 
-        <Accordion type="single" collapsible className="space-y-3">
-          {faqs.map((faq, i) => (
-            <AccordionItem
-              key={i}
-              value={`faq-${i}`}
-              className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-sm transition-shadow duration-200"
-            >
-              <AccordionTrigger className="text-foreground text-left font-semibold text-base hover:no-underline py-5">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base pb-5 leading-relaxed">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <AnimatedSection delay={0.12}>
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, i) => (
+              <AccordionItem
+                key={i}
+                value={`faq-${i}`}
+                className="premium-card px-8 py-0 data-[state=open]:shadow-md hover:translate-y-0"
+              >
+                <AccordionTrigger className="text-foreground text-left font-semibold text-base hover:no-underline py-6">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-base pb-6 leading-relaxed">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </AnimatedSection>
       </div>
     </section>
   );

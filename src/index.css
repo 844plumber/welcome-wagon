@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -22,7 +22,7 @@
     --secondary-foreground: 0 0% 10%;
 
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 0 0% 45%;
 
     --accent: 195 100% 44%;
     --accent-foreground: 0 0% 100%;
@@ -30,11 +30,11 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
     --ring: 209 100% 36%;
 
-    --radius: 0.625rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 10%;
@@ -45,8 +45,8 @@
     --sidebar-border: 0 0% 90%;
     --sidebar-ring: 209 100% 36%;
 
-    --section-alt: 0 0% 96%;
-    --footer-bg: 0 0% 10%;
+    --section-alt: 220 20% 97%;
+    --footer-bg: 220 20% 10%;
     --footer-foreground: 0 0% 100%;
   }
 }
@@ -63,4 +63,51 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }
+}
+
+/* Noise texture overlay */
+.noise-bg {
+  position: relative;
+}
+.noise-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+.noise-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle gradient backgrounds */
+.gradient-hero {
+  background: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(0 0% 100%) 100%);
+}
+
+.gradient-section-alt {
+  background: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(220 14% 96%) 100%);
+}
+
+.gradient-cta {
+  background: linear-gradient(135deg, hsl(209 100% 36%) 0%, hsl(209 100% 28%) 100%);
+}
+
+/* Premium card styles */
+.premium-card {
+  @apply bg-card rounded-[20px] border border-border p-8 md:p-10;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.premium-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.04);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
