@@ -1,5 +1,4 @@
 import { Phone, Calendar, AlertTriangle, MessageSquare, Clock, Bot } from "lucide-react";
-import AnimatedSection from "@/components/AnimatedSection";
 
 const features = [
   { icon: Phone, text: "Answers every call instantly" },
@@ -11,37 +10,30 @@ const features = [
 
 const Solution = () => {
   return (
-    <section className="py-24 md:py-36 gradient-section-alt noise-bg">
+    <section className="py-20 md:py-28 bg-secondary">
       <div className="container mx-auto px-6 max-w-5xl">
-        <AnimatedSection>
-          <div className="text-center mb-16">
-            <p className="text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4">The Solution</p>
-            <h2 className="text-4xl sm:text-[44px] font-extrabold text-foreground tracking-[-0.02em] leading-tight">
-              844-PLUMBER + 24/7 AI Receptionist
-            </h2>
-          </div>
-        </AnimatedSection>
+        <div className="text-center mb-14">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">The Solution</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
+            844-PLUMBER + 24/7 AI Receptionist
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((f, i) => (
-            <AnimatedSection key={i} delay={i * 0.08}>
-              <div className="premium-card h-full">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
-                  <f.icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
-                </div>
-                <p className="text-foreground font-semibold text-lg leading-snug">{f.text}</p>
-              </div>
-            </AnimatedSection>
+            <div
+              key={i}
+              className="bg-background border border-border rounded-xl p-6 hover:shadow-md transition-shadow duration-200"
+            >
+              <f.icon className="w-6 h-6 text-accent mb-4" strokeWidth={1.5} />
+              <p className="text-foreground font-semibold text-base leading-snug">{f.text}</p>
+            </div>
           ))}
 
-          <AnimatedSection delay={0.4}>
-            <div className="premium-card h-full bg-gradient-to-br from-primary/[0.04] to-accent/[0.06] border-primary/15">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                <Bot className="w-5 h-5 text-primary" strokeWidth={1.5} />
-              </div>
-              <p className="text-foreground font-bold text-lg leading-snug">No missed calls.<br />No lost jobs.<br />No hiring staff.</p>
-            </div>
-          </AnimatedSection>
+          <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col justify-center">
+            <Bot className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
+            <p className="text-foreground font-bold text-base leading-snug">No missed calls.<br />No lost jobs.<br />No hiring staff.</p>
+          </div>
         </div>
       </div>
     </section>

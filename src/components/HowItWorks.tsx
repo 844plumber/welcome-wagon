@@ -1,5 +1,4 @@
 import { Search, Settings, Zap } from "lucide-react";
-import AnimatedSection from "@/components/AnimatedSection";
 
 const steps = [
   {
@@ -24,29 +23,25 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-24 md:py-36 bg-background noise-bg">
+    <section className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-6 max-w-5xl">
-        <AnimatedSection>
-          <div className="text-center mb-20">
-            <p className="text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4">How It Works</p>
-            <h2 className="text-4xl sm:text-[44px] font-extrabold text-foreground tracking-[-0.02em]">
-              Setup in 3 Simple Steps
-            </h2>
-          </div>
-        </AnimatedSection>
+        <div className="text-center mb-16">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">How It Works</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
+            Setup in 3 Simple Steps
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, i) => (
-            <AnimatedSection key={i} delay={i * 0.12}>
-              <div className="text-center">
-                <div className="text-6xl font-extrabold text-border/60 mb-6 font-heading tracking-tight">{step.num}</div>
-                <div className="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/15 flex items-center justify-center mx-auto mb-6">
-                  <step.icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground tracking-tight">{step.title}</h3>
-                <p className="text-muted-foreground text-base leading-relaxed max-w-[280px] mx-auto">{step.desc}</p>
+            <div key={i} className="text-center">
+              <div className="text-5xl font-extrabold text-border mb-4 font-heading">{step.num}</div>
+              <div className="w-14 h-14 rounded-xl bg-secondary border border-border flex items-center justify-center mx-auto mb-5">
+                <step.icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
               </div>
-            </AnimatedSection>
+              <h3 className="text-xl font-bold mb-2 text-foreground">{step.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
+            </div>
           ))}
         </div>
       </div>
