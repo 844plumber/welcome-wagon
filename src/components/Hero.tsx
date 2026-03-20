@@ -21,9 +21,9 @@ const Hero = () => {
               Stop Losing Plumbing Jobs to{" "}
               <span className="relative inline-block">
                 <span className="text-red-600">Missed Calls.</span>
-                <svg className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[75%]" viewBox="0 0 200 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M25 2 Q100 -14 175 2" stroke="#1A1A1A" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-                  <path d="M40 7 Q100 -5 160 7" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.6"/>
+                <svg className="absolute top-[calc(100%+2px)] left-1/2 -translate-x-1/2 w-[80%] h-4" viewBox="0 0 200 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 3 Q100 16 180 3" stroke="#000000" strokeWidth="3" strokeLinecap="round" fill="none"/>
+                  <path d="M35 6 Q100 17 165 6" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
                 </svg>
               </span>
             </h1>
