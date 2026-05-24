@@ -1,7 +1,7 @@
 import { Play, ExternalLink } from "lucide-react";
+import THUMBNAIL_URL from "@/assets/video-thumbnail.jpg";
 
-const YOUTUBE_URL = "https://youtube.com/shorts/dV7VjowY-iw";
-const THUMBNAIL_URL = "https://img.youtube.com/vi/dV7VjowY-iw/maxresdefault.jpg";
+const YOUTUBE_URL = "https://youtube.com/shorts/epcHwFHE2sg";
 
 const VideoIntro = () => {
   return (
